@@ -1,7 +1,8 @@
 class Node:
-    def __init__(self):
+    def __init__(self, rect):
         self.colour = ""
         self.connected = []
+        self.rect = rect
 
     def connectTo(self, b):
         self.connected.append(b)
