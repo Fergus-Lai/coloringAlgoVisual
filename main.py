@@ -17,13 +17,20 @@ def leftClickHandler(surface, mousePos, nodes, link):
     if not (collide):
         return Node(pygame.draw.circle(surface, fg, mousePos, nodeRadius, nodeWidth))
     if len(link) == 2 and len(nodes) >= 2:
-        print("a")
         Node.connect(link[0], link[1])
         return link
 
 
-def rightClickHandler(mousePos):
+def rightClickHandler(surface, mousePos, nodes, edges):
     pass
+
+
+def draw(screen, edges, nodes):
+    screen.fill(bg)
+    for edge in edges:
+        node
+    for node in nodes:
+        node.rect
 
 
 # Init Pygame Window
@@ -54,7 +61,7 @@ while running:
                             screen, fg, link[0].rect.center, link[1].rect.center))
                         link = []
             elif event.button == 3:
-                rightClickHandler()
+                rightClickHandler(screen, mousePos, nodes, edges)
     pygame.display.update()
 
 
